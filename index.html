@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(15, 15, 15, 0.959);
+        }
+        ul{
+            display: flex;
+            background-color: black;
+            align-items: center;
+            text-align: center;
+        }
+        ul li{
+            list-style: none;
+            color: white;
+            padding: 0 12px;
+            animation: slideLeft 1s ease forwards ;
+
+            animation-delay:calc(.2s*var(--i));
+
+
+        }
+        ul img{
+            height: 70px;
+            width: 70px;
+           
+
+        }
+        ul li a{
+            color: white;
+            text-decoration: none;
+
+        }
+        ul li:hover{
+            opacity: 0.3;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: x-large;
+        }
+        .logo img{
+            border-radius: 50%;
+            margin: 2px;
+        }
+        .container{
+            background-image: url(./real.jpg);
+            background-size: cover;
+            min-height: 50vh;
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            margin: 23px auto;
+            width: 60%;
+            border-radius: 12px;
+            padding: 34px;
+           
+        
+        }
+        .bottam{
+            position: sticky;
+            background-color:black;
+        height: 150px;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+        
+        }
+        #myprogressbar{
+            width: 90vw;
+            cursor: pointer;
+    
+        }
+        .icon{
+            margin: 12px 0;
+        }
+        .icon:hover{
+            opacity: 0.5;
+
+        }
+
+      .icon i{
+        cursor: pointer;
+      }
+      .songItem{
+        height: 40px;
+        display: flex;
+        background-color: white;
+        width: 110%;
+        color:black;
+        margin: 15px 0;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 34px;
+
+      }
+      .songItem:hover{
+        background: rgb(95, 199, 95);
+      }
+      .songItem img{
+width: 40px;
+margin: 0 10px ;
+border-radius: 34px;
+
+      }
+      
+      .timetamp{
+        margin: 0 28px ;
+        cursor: pointer;
+      }
+      .songinfo{
+        position: absolute;
+        left: 10vw; 
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+align-items: center;
+justify-content: center;
+
+      }
+      .songinfo img{
+        margin-right: 8px;
+        transition: opacity 0.4s ease-in;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: x-large;
+
+      }
+      #nameofsong{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      @keyframes slideLeft{
+        0%{
+            transform: translateX(100px);
+            opacity: 0;
+        }
+    }
+    </style>
+
+</head>
+
+<!-- start html code -->
+
+<body>
+<!--  navebar  -->
+    <nav>
+        <ul>
+            <li  class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Spotify_App_Logo.svg" alt="">Spotify</li>
+            <li style="--i:1"><a href="./index.html">Home</a></li>
+            <li style="--i:2"><a href="./index.html">About</a></li>
+            <li style="--i:3"><a href="./index.html">Playlists</a></li>
+            <li style="--i:4"><a href="./log-in.html">Log in</a></li>
+        </ul>
+    </nav>
+    <!--ceate a side bar for songs  -->
+    <div  class="container">
+       
+        <div  class="songlist">
+            <h1>Playlist</h1>
+            <div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">03:22 <i id="0" class="far songplaybtn fa-1.5x fa-play-circle"></i></span></span>
+                </div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">02:24 <i id="1" class="far songplaybtn fa-1.5x fa-play-circle"></i></span></span>
+                </div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">04:44 <i id="2" class="far songplaybtn fa-1.5x fa-play-circle " ></i></span></span>
+                </div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">02:55 <i id="3" class="far songplaybtn fa-1.5x fa-play-circle"></i></span></span>
+                </div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">03:77<i id="4" class="far songplaybtn fa-1.5x fa-play-circle"></i></span></span>
+                </div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">02:25 <i id="5" class="far songplaybtn fa-1.5x fa-play-circle"></i></span></span>
+                </div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">04:67 <i id="6" class="far songplaybtn fa-1.5x fa-play-circle"></i></span></span>
+                </div>
+                <div  class="songItem">
+                    <img height="45px" width="45px" src="./bato.jpg" alt="">
+                    <span  class="songName">Let me love you</span>
+                    <span  class="songlistplay"><span  class="timetamp">05:80 <i id="7" class="far songplaybtn fa-1.5x fa-play-circle"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div  class="songbanner">
+
+        </div>
+    </div>
+    <!-- play bar -->
+    <div  class="bottam">
+        <input type="range" name="range" id="myprogressbar" value="0" min="0" max="10">
+    
+        <div  class="icon">
+            <!-- font aswomeicon -->
+            <i  class="fas fa-3x fa-step-backward" id="previous" ></i>
+            <i  class="far songplaybtn fa-3x fa-play-circle " id="masterplay"></i>
+            <i  class="fas fa-3x fa-step-forward" id="next" ></i>
+            
+        </div>
+        <div  class="songinfo"><img height="40px" width="90px" src="https://i.gifer.com/44zG.gif" alt="" id="gift">
+            <br> <span id="nameofsong">Play the Music</span>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/3dbdc071e7.js" crossorigin="anonymous"></script>
+    <script>
+console.log("welcome");
+
+//play the music
+
+//insilize the variable
+let songIndex=0;
+let adiuoElement=new Audio();
+let masterplay=document.getElementById('masterplay');
+let myprogressbar=document.getElementById('myprogressbar');
+let gift=document.getElementById('gift')
+let songItem=Array.from(document.getElementsByClassName('songItem'));
+let nameofsong=document.getElementById('nameofsong')
+
+
+// song list
+ let songs=[
+    {songName:"Akhiyaan Gulab",filePath:"./song0.mp3",coverPath:"https://c.saavncdn.com/214/Teri-Baaton-Mein-Aisa-Uljha-Jiya-Hindi-2024-20240205151011-500x500.jpg"},
+    {songName:"Kitna Chahe",filePath:"./song1.mp3",coverPath:"https://c.saavncdn.com/786/Lover-Punjabi-2022-20220804082505-500x500.jpg"},
+    {songName:"Naseeb Se",filePath:"./song2.mp3",coverPath:"https://c.saavncdn.com/824/Naseeb-Se-From-Satyaprem-Ki-Katha-Hindi-2023-20230526145336-500x500.jpg"},
+    {songName:"Nain Ta Heere",filePath:"./song3.mp3",coverPath:"https://c.saavncdn.com/148/Nain-Ta-Heere-From-Jugjugg-Jeeyo-Hindi-2022-20220616121005-500x500.jpg"},
+    {songName:"Tera Ban Jaunga",filePath:"./song4.mp3",coverPath:"https://c.saavncdn.com/807/Kabir-Singh-Hindi-2019-20240131131003-500x500.jpg"},
+    {songName:"Love Stereo Again",filePath:" https://www.pagalworld.com.cm/files/download/id/67133",coverPath:"https://c.saavncdn.com/240/Love-Stereo-Again-Hindi-2023-20230714194424-500x500.jpg"},
+    {songName:"Tera Yaar Hoon Main",filePath:"./song6.mp3",coverPath:"https://c.saavncdn.com/074/Sonu-Ke-Titu-Ki-Sweety-Hindi-2018-20180214153942-500x500.jpg"},
+    {songName:"Udd Ja Kale KaaVa",filePath:"./song7.mp3",coverPath:"https://c.saavncdn.com/159/Gadar-2-Hindi-2023-20230629113440-500x500.jpg"},
+
+   
+
+] 
+//adiuoElement.play();
+
+//handle pause play events
+masterplay.addEventListener('click',()=>{
+    if(adiuoElement.paused || adiuoElement.currentTime<=0){
+        adiuoElement.play();
+        masterplay.classList.remove('fa-solid fa-play');
+        masterplay.classList.add('fa-solid fa-pause');
+        gift.style.opacity=0;
+    }
+    else{
+        adiuoElement.pause();
+        masterplay.classList.remove('fa-solid fa-pause');
+        masterplay.classList.add('fa-solid fa-play');
+        gift.style.opacity=0;
+
+    }
+})   
+//listen events 
+adiuoElement.addEventListener('timeupdate',()=>{
+    progrss=parseInt((adiuoElement.currentTime/adiuoElement.duration)*100);
+    myprogressbar.value=progrss;
+
+
+})
+myprogressbar.addEventListener('change',()=>{
+    adiuoElement.currentTime=myprogressbar.value*adiuoElement.duration/100
+})
+
+songItem.forEach( (element,i)=>{
+    console.log(element,i);
+    element.getElementsByTagName("img")[0].src=songs[i].coverPath;
+    element.getElementsByClassName("songName")[0].innerText=songs[i].songName
+
+})
+
+const makeplayall=()=>{
+    Array.from(document.getElementsByClassName("songplaybtn")).forEach((element)=>{
+        element.classList.remove('fa-pause-circle');
+
+        element.classList.add('fa-play-circle');
+
+        })
+    
+}
+
+Array.from(document.getElementsByClassName("songplaybtn")).forEach((element)=>{
+    element.addEventListener('click',(e)=>{
+        makeplayall();
+        songIndex = parseInt(e.target.id);
+e.target.classList.remove('fa-play-circle');
+e.target.classList.add('fa-pause-circle');
+adiuoElement.src=`./song${songIndex}.mp3`;
+nameofsong.innerText=songs[songIndex].songName;
+
+adiuoElement.currentTime=0;
+adiuoElement.play();
+gift.style.opacity=1;
+
+masterplay.classList.remove('fa-play-circle');
+masterplay.classList.add('fa-pause-circle');
+
+
+
+    })
+})
+document.getElementById('next').addEventListener('click',()=>{
+    if(songIndex>=8){
+        songIndex=0
+    }
+    else{
+        songIndex+=1;
+        adiuoElement.src=`./song${songIndex}.mp3`;
+        nameofsong.innerText=songs[songIndex].songName;
+adiuoElement.currentTime=0;
+adiuoElement.play();
+masterplay.classList.remove('fa-play-circle');
+masterplay.classList.add('fa-pause-circle');
+
+
+
+    }
+
+})
+document.getElementById('previous').addEventListener('click',()=>{
+    if(songIndex<=0){
+        songIndex=0
+    }
+    else{
+        songIndex-=1;
+        adiuoElement.src=`./song${songIndex}.mp3`;
+        nameofsong.innerText=songs[songIndex].songName;
+adiuoElement.currentTime=0;
+adiuoElement.play();
+masterplay.classList.remove('fa-play-circle');
+masterplay.classList.add('fa-pause-circle');
+
+
+
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

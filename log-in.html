@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login in</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+    ul{
+        display: flex;
+        background-color: black;
+        align-items: center;
+        text-align: center;
+    }
+    ul li{
+        list-style: none;
+        color: white;
+        padding: 0 12px;
+        
+    }
+    ul img{
+        height: 70px;
+        width: 70px;
+       
+
+    }
+    ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    ul li:hover{
+        opacity: 0.3;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: x-large;
+    }
+    .logo img{
+        border-radius: 50%;
+        margin: 2px;
+    }
+    section{
+        background-color: rgba(15, 15, 15, 0.959);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+    section div.main{
+        margin: 32px 0;
+        padding: 32px;
+        height:750px ;
+        width: 550px;
+        background: #000;
+        border-radius: 10px;
+
+    }
+    section div.main h1{
+        text-align: center;
+        margin: 40px 0;
+        color: white;
+        font-size: 48px;
+    }
+    section div.accoun-connect{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    section div.accoun-connect button:hover{
+        background-color:white;
+        color: black;
+    }
+    section div.accoun-connect button{
+        width: 324px;
+        text-align: center;
+        padding: 5px 0;
+        outline: none;
+        border: none;
+        border-radius: 500px;
+        color: white;
+        background: transparent;
+        border: 1px solid #878787;
+        font-weight: bold;
+    }
+section div.accoun-connect button img{
+    width: 23px;
+    float: left;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+section div.accoun-connect button span{
+    position: relative;
+    top: 3px;
+
+}
+section div.main hr{
+    margin: 32px 100px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: 1px solid rgb(41,41,41);
+
+}
+section div.main .log-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+   
+}
+section div.main .log-in form label{
+    color:white;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: inline-block;
+
+}
+section div.main .log-in form input{
+    display: block;
+    padding: 14px;
+    width: 324px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background: rgb(18,18,18);
+    outline: none;
+    border: none;
+    appearance: none;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px #878787;
+    color: white;
+
+}
+
+.switch{
+    margin: 0;
+    padding: 0;
+}
+.switch input[type=checked]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+
+}
+.switch label{
+    margin: 10px 0px 20px 0px;
+    cursor: pointer;
+    padding: 3px;
+    width: 32px;
+    height: 16px;
+    background: #727272;
+    border-radius: 50em;
+    position: relative;
+    box-sizing: border-box;
+
+
+}
+.switch label::after{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    background: black;
+    border-radius: 50em;
+    transition: .1s;
+}
+.switch input:active+label{
+    background-color: #727272;
+
+}
+.switch input:checked+label{
+    background: #1ed760;
+
+}
+.switch input:checked+label::after{
+    transform: translateX(calc(100% + 5px));
+}
+
+input#switch{
+    display: none;
+}
+
+.switch span{
+    color:white;
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    left: 7px;
+    bottom: 11px;
+}
+ section div.main .log-in button{
+    background-color: #1ed760;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 8px 32px;
+    height: 48px;
+    width: 324px;
+    letter-spacing: .4px;
+    font-size: 16px;
+    margin: 20px 0px;
+    
+ }
+ section div.main .log-in button:hover{
+    box-shadow: 0 0 0 5px #1ed760;
+    
+    
+ }
+
+
+ section div.main .log-in a{
+    display: block;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    text-decoration: underline;
+
+ }
+
+section div.main .last{
+    margin: 10px 0;
+    text-align: center;
+
+}
+section div.main .last span{
+    color: #a7a7a7;
+    margin-right: 3px;
+}
+section div.main .last a{
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li  class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Spotify_App_Logo.svg" alt="">Spotify</li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html">About</a></li>
+            <li><a href="./index.html">Playlists</a></li>
+            <li>log in</li>
+        </ul>
+    </nav>
+   <section>
+    <div class="main">
+        <h1>log in to spotify</h1>
+        <div class="accoun-connect">
+            <button class="a-c-btn" id="g"><img src="./google.png" alt=""><span>Continue With Google</span></button>
+            <button class="a-c-btn" id="f"><img  src="./fece.jpg" alt=""><span>Continue With Fecebook</span></button>
+            <button class="a-c-btn" id="a"><img src="./apple.png" alt=""><span>Continue With Apple</span></button>
+        </div>
+
+        <hr>
+<div class="log-in">
+    <form action="">
+        <label for="">Email or Username</label>
+        <input type="text" name="" id="" placeholder="Email or Username">
+        <label for="">Password</label>
+        <input type="password" name="" id="" placeholder="Password">
+
+        <div class="switch">
+            <input type="checkbox" id="switch"  checked>
+            <label for="switch"></label>
+            <span>Remember Me</span>
+
+        </div>
+        <button class="">log In</button>
+
+        <a href="#">Forgrt Your Password?</a>
+
+    </form>
+   
+</div>
+
+<hr>
+<div class="last">
+    <span>Don't You have an account </span>
+    <a href="#">sign up for spotify</a>
+</div>
+    </div>
+   </section>
+</body>
+
+</html>
